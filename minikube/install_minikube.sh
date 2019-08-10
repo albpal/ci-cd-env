@@ -23,3 +23,4 @@ kubectl create clusterrolebinding add-on-cluster-admin --clusterrole=cluster-adm
 sleep 60
 kubectl patch deployment coredns -p "{\"spec\":{\"template\":{\"metadata\":{\"annotations\":{\"apalau/updated-at\":\"$(date +%s)\"}}}}}" -n kube-system
 sleep 60
+minikube addons enable ingress
