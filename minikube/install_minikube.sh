@@ -15,7 +15,7 @@ gpgcheck=1
 repo_gpgcheck=1
 gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
 EOF
-yum install kubectl -y
+yum install kubectl socat -y
 systemctl stop kubepods-burstable.slice
 sysctl -w net.bridge.bridge-nf-call-iptables=1
 $(dirname $0)/start_minikube.sh
